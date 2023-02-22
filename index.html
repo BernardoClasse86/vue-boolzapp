@@ -5,287 +5,301 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
-    <script src="https://kit.fontawesome.com/36a89bf28f.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://kit.fontawesome.com/36a89bf28f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/app.css">
-
 </head>
 
 <body>
 
-    <div class="container">
+    <div id="app">
 
+        <div class="container">
+            
         <!-------- SIDEBAR -------->
-
+            
         <section class="sidebar row-column">
 
-            <!----- PROFILE ----->
-
-            <div class="col your-profile">
-
-                <div class="row profile">
-
-                    <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-
-                    <p>Bernardo</p>
-
-                    <ul class="row profile-interactions">
-
-                        <li><a href="#"><i class="fa-solid fa-circle-notch"></i></a></li>
-                        <li><a href="#"><i class="fa-solid fa-message"></i></a></li>
-                        <li><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-            <!----- /PROFILE ----->
-
-            <!----- NOTIFICATIONS ----->
-
-            <div class="col notifications">
-
-                <div class="row push-notifications">
-
-                    <div class="bell-style">
-                        <i class="fa-solid fa-bell-slash"></i>
-                    </div>
-
-                    <div class="notifications-toggle">
-
-                        <h4>Ricevi notifiche di nuovi messaggi</h4>
-
-                        <p>Attiva notifiche desktop</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!----- /NOTIFICATIONS ----->
-
-            <!----- SEARCH-BAR ----->
-
-            <div class="col chat-search">
-
-                <div class="row search-row">
-
-                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-
-                    <input class="search-input" type="text" placeholder="Cerca o inizia una nuova chat">
-
-                </div>
-
-            </div>
-
-            <!----- /SEARCH-BAR ----->
-
-            <!----- CONTACTS ----->
-
-            <div class="col chat-list">
-
-                <ul class="row-column contact-list">
-
-                    <li class="row chats">
-
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-
-                        <div class="contact">
-
-                            <h4 class="contact-name">Fabio</h4>
-
-                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
-
-                        </div>
-
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-
-                    <li class="row chats">
-
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-
-                        <div class="contact">
-
-                            <h4>Fabio</h4>
-
-                            <p>Questo &eacute; il tuo messaggio</p>
-
-                        </div>
-
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-
-                    <li class="row chats">
-
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-
-                        <div class="contact">
-
-                            <h4 class="contact-name">Fabio</h4>
-
-                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
-
-                        </div>
-
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-
-                    <li class="row chats">
-
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-
-                        <div class="contact">
-
-                            <h4 class="contact-name">Fabio</h4>
-
-                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
-
-                        </div>
-
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-
-                    <li class="row chats">
-
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-
-                        <div class="contact">
-
-                            <h4 class="contact-name">Fabio</h4>
-
-                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
-
-                        </div>
-
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-
-                    <li class="row chats">
-
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-
-                        <div class="contact">
-
-                            <h4 class="contact-name">Fabio</h4>
-
-                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
-
-                        </div>
-
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-
-                    <li class="row chats">
-
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-
-                        <div class="contact">
-
-                            <h4 class="contact-name">Fabio</h4>
-
-                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
-
-                        </div>
-
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-
+                <!----- PROFILE ----->
+                
+                <div class="col your-profile">
                     
-
-
+                    <div class="row profile">
+                        
+                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
+                        
+                        <p class="profile-name">Bernardo</p>
+                        
+                        <ul class="row profile-interactions">
+                            
+                            <li><a href="#"><i class="fa-solid fa-circle-notch"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-message"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
+                            
+                        </ul>
+                        
+                    </div>
+                    
+                </div>
+                
+                <!----- /PROFILE ----->
+                
+                <!----- NOTIFICATIONS ----->
+                
+                <div class="col notifications">
+                    
+                    <div class="row push-notifications">
+                        
+                        <div class="bell-style">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        
+                        <div class="notifications-toggle">
+                            
+                            <h4>Ricevi notifiche di nuovi messaggi</h4>
+                            
+                            <p>Attiva notifiche desktop</p>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <!----- /NOTIFICATIONS ----->
+                
+                <!----- SEARCH-BAR ----->
+                
+                <div class="col chat-search">
+                    
+                    <div class="row search-row">
+                        
+                        <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        
+                        <input class="search-input" type="text" placeholder="Cerca o inizia una nuova chat">
+                        
+                    </div>
+                    
+                </div>
+                
+                <!----- /SEARCH-BAR ----->
+                
+                <!----- CONTACTS ----->
+                
+                <div class="col chat-list">
+                    
+                <ul class="row-column contact-list">
+                    
+                    <li class="row chats">
+                        
+                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
+                        
+                        <div class="contact">
+                            
+                            <h4 class="contact-name">Fabio</h4>
+                            
+                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
+                            
+                        </div>
+                        
+                        <div class="msg-time">12:00</div>
+                        
+                    </li>
+                    
+                    <li class="row chats">
+                        
+                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
+                        
+                        <div class="contact">
+                            
+                            <h4>Fabio</h4>
+                            
+                            <p>Questo &eacute; il tuo messaggio</p>
+                            
+                        </div>
+                        
+                        <div class="msg-time">12:00</div>
+                        
+                    </li>
+                    
+                    <li class="row chats">
+                        
+                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
+                        
+                        <div class="contact">
+                            
+                            <h4 class="contact-name">Fabio</h4>
+                            
+                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
+                            
+                        </div>
+                        
+                        <div class="msg-time">12:00</div>
+                        
+                    </li>
+                    
+                    <li class="row chats">
+                        
+                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
+                        
+                        <div class="contact">
+                            
+                            <h4 class="contact-name">Fabio</h4>
+                            
+                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
+                            
+                        </div>
+                        
+                        <div class="msg-time">12:00</div>
+                        
+                    </li>
+                    
+                    <li class="row chats">
+                        
+                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
+                        
+                        <div class="contact">
+                            
+                            <h4 class="contact-name">Fabio</h4>
+                            
+                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
+                            
+                        </div>
+                        
+                        <div class="msg-time">12:00</div>
+                        
+                    </li>
+                    
+                    <li class="row chats">
+                        
+                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
+                        
+                        <div class="contact">
+                            
+                            <h4 class="contact-name">Fabio</h4>
+                            
+                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
+                            
+                        </div>
+                        
+                        <div class="msg-time">12:00</div>
+                        
+                    </li>
+                    
+                    <li class="row chats">
+                        
+                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
+                        
+                        <div class="contact">
+                            
+                            <h4 class="contact-name">Fabio</h4>
+                            
+                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
+                            
+                        </div>
+                        
+                        <div class="msg-time">12:00</div>
+                        
+                    </li>
+                    
+                    
+                    
+                    
                 </ul>
-
+                
             </div>
-
+            
             <!----- /CONTACTS ----->
-
+            
         </section>
-
+        
         <!-------- /SIDEBAR -------->
-    
+
+        <!-------- CHAT-SECTION -------->
+        
         <section class="chat-section row-column">
 
+            <!----- CHAT-INFO ----->
+            
             <div class="col contact-chat-info">
-
-                <div class="row profile">
-
+                
+                <div class="row chat-profile">
+                    
                     <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-
-                    <p>Bernardo</p>
-
+                    
+                    <p class="profile-name">Bernardo</p>
+                    
                     <ul class="row profile-interactions">
-
+                        
                         <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                         <li><a href="#"><i class="fa-solid fa-paperclip"></i></a></li>
                         <li><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
-
+                        
                     </ul>
+                    
+                </div>
+                
+            </div>
+
+            <!----- /CHAT-INFO ----->
+
+            <!----- CHAT ----->
+            
+            <div class="col contact-chat">
+
+                <div class="container-chat">
+
+                    <div class="sent-msg">
+                        <p>Ciao sono io</p>
+                        <p class="msg-time">15:00</p>
+                    </div>
+
+                    <div class="sent-msg">
+                        <p>sto preparando da mangiare</p>
+                        <p class="msg-time">15:00</p>
+                    </div>
+
+                    <div class="recevied-msg">
+                        <p>okey tra poco arrivo</p>
+                        <p class="msg-time">15:00</p>
+                    </div>
+                    
 
                 </div>
 
+                <div class="recevied-chat"></div>
+                
             </div>
 
-            <div class="col contact-chat">
+            <!----- /CHAT ----->
 
-                Quidem, numquam assumenda saepe eum doloremque tempore explicabo et minus reprehenderit cum aliquam porro libero nulla sapiente repellat iure nemo enim dignissimos debitis laudantium autem sit. Suscipit commodi doloribus facere!
-                Tempora recusandae, saepe possimus itaque minima sunt a delectus corrupti qui sapiente natus rerum esse illo maiores accusantium similique eaque repudiandae, nemo est fugiat sed voluptas! Excepturi architecto amet adipisci!
-                Et, porro perferendis. Iusto at amet quidem, odit harum magni asperiores alias, modi cumque quisquam eligendi sed tempore ipsa placeat tenetur ullam provident assumenda, inventore in nam! Dolor, illum officiis?
-                Repellendus fugiat esse, aliquam, dolorem reprehenderit fuga eum nesciunt non illo officiis aspernatur, praesentium nulla! Placeat suscipit neque laborum ut laudantium sed voluptatem iste non perferendis voluptate, tempora illo velit.
-                Consequatur odio, soluta doloribus, nihil fugiat nam voluptate distinctio dolor dolorum esse quidem, aliquid delectus optio vitae expedita culpa quod possimus debitis voluptatibus sint similique praesentium vel nisi nulla. Explicabo!
-                Ea ex quia odio. Dignissimos, quae. Aliquid voluptatum cum alias rem quasi id optio, perspiciatis mollitia quis non repellendus expedita molestiae, temporibus debitis dignissimos, fuga ullam porro unde iure hic?
-                Blanditiis, quis! Est ipsa nesciunt vel eum dolorem delectus, aperiam aliquam earum, nam totam itaque, illo pariatur laudantium dicta qui eaque? Id impedit quas accusantium temporibus, fugit cupiditate quidem libero.
-                Modi aut aspernatur, suscipit similique rerum veniam alias officiis, sed libero odio, quae minima optio illo repellat nulla quod vel quasi quos mollitia iusto ipsam laudantium tempore. Similique, quas culpa.
-                Commodi dicta repellat excepturi assumenda facilis sint repellendus minima officiis dignissimos, obcaecati eligendi ducimus, sit consectetur animi beatae unde! Porro vitae libero voluptatibus facilis sit sint obcaecati repellat modi quaerat!
-                Pariatur id, vel perspiciatis laudantium vitae ab adipisci praesentium cumque quos eveniet fuga? Libero sequi, praesentium veritatis fugiat harum quis autem, magni odit ratione consectetur dolorum facere perspiciatis explicabo inventore?
-                Cum, sed. Natus ea qui modi sunt dolore, nostrum necessitatibus ex culpa, saepe autem a dicta dolor fugit atque repudiandae ratione officiis rerum enim expedita explicabo voluptate. Perspiciatis, ullam vitae.
-                Quis tenetur excepturi porro consectetur unde? Ab exercitationem iusto molestiae magni architecto. Minus velit corrupti tempora quasi totam assumenda corporis deserunt enim praesentium, deleniti tenetur adipisci veritatis perferendis eum dicta?
-                Exercitationem, in! Soluta repellendus dolores id, nulla incidunt dolorum officiis voluptatibus quod accusantium dicta reiciendis! Officia, ipsa doloremque quasi voluptatibus quas similique quibusdam beatae voluptas illum labore earum repellat. Dolorem.
-                Maiores fugiat saepe officia eveniet, reprehenderit maxime voluptatibus debitis magni consequuntur amet quaerat ad suscipit minima ex voluptas architecto aliquid eos tempore commodi voluptatem ullam id adipisci nulla repudiandae! Commodi?
-                Ullam, illum laboriosam, consectetur natus tempore error eaque sunt magnam explicabo nihil id, sequi doloribus! Natus iusto praesentium hic veniam magni dolore voluptatem distinctio officiis. Quia praesentium pariatur alias labore!
-                Soluta obcaecati mollitia aliquid dolorum, culpa non neque beatae velit ea tenetur possimus amet sunt repellat, optio suscipit omnis consequuntur temporibus dolor doloremque facere minima doloribus maxime! Nulla, aperiam perferendis?
-                Quas reprehenderit quis rem perferendis, iste officia illo aperiam obcaecati nemo quia, quo delectus ipsam quam ex maxime vero dolores sint distinctio magnam. Veniam, aliquid laudantium laboriosam qui labore error?
-                Veritatis odit autem ut deserunt libero consectetur excepturi neque? Dolorum unde consequatur mollitia quis ratione inventore neque accusantium error quaerat dolor recusandae ad repellendus deserunt excepturi sit, dicta repellat quo.
-                Dignissimos perferendis a beatae aliquid ratione distinctio architecto eum dolorem, cumque amet omnis, deleniti dolores blanditiis possimus aut labore? Sit magnam corporis iure laboriosam quo est sunt doloribus fugit quam.
-                Sunt, dolor? Assumenda officiis temporibus dignissimos fugiat reiciendis. Repudiandae, porro. Laudantium, voluptatem minima inventore aliquid incidunt rem aperiam corporis earum dolore officia reiciendis magni consequatur deleniti magnam temporibus eveniet ut.
-                Neque facilis dicta maiores placeat at corporis a officia? Necessitatibus enim aperiam natus magni in. Nemo ipsa ea labore, ad dolor cum atque amet quibusdam praesentium vero perferendis dolore aperiam.
-                Esse vitae omnis, laudantium consequuntur ab fugit, vero neque quaerat inventore sequi cum eos consequatur eum nesciunt quod, odio quae laboriosam? Fugit omnis, animi possimus vero alias corrupti praesentium magnam?
-                A, impedit quia sint architecto ea facere porro dignissimos asperiores molestias, nihil perferendis sapiente et non. Velit sunt voluptatem distinctio atque laboriosam illum, saepe ut laborum omnis eaque dolorum ex.
-                Sunt, consequatur, laboriosam molestiae voluptatem iure quisquam amet nostrum quis perspiciatis distinctio soluta adipisci cumque nemo repudiandae facilis aliquid atque accusamus, nisi eveniet vitae itaque. Voluptatem non tempore modi eos?
-                Enim, provident eum possimus dignissimos nostrum sunt molestias sequi fugiat eaque. Odio porro tempore nulla facere sapiente fugiat ratione, labore eaque voluptate quisquam est dignissimos dolores nihil mollitia esse saepe?
-                Quibusdam, dolorem nulla illum consequuntur neque nisi ipsum, perspiciatis assumenda labore porro eius ex eligendi autem. Corrupti eligendi natus, id dolore laboriosam doloremque officiis quia fuga ab tempore at animi.
-                Quisquam alias nesciunt temporibus repellendus illo omnis nam cum sapiente! Dolores sequi placeat vitae distinctio aperiam voluptate soluta cumque quas, dolor quidem commodi totam minima, ea harum sit ab maxime?
-                Praesentium labore mollitia quis minima consequatur? Fuga, amet accusantium. Doloribus incidunt aspernatur culpa harum corrupti velit recusandae, cumque illo est assumenda. Quis soluta maiores facilis blanditiis natus id corrupti fuga.
-                Quae dolores blanditiis repudiandae non quo, recusandae saepe sit, vero voluptatibus ab laudantium ratione possimus distinctio officiis, eos quibusdam praesentium qui? Eius deserunt obcaecati eligendi. Exercitationem, consequatur. Quas, recusandae illo.
-                Quia, ratione, illum illo velit placeat, ullam similique numquam provident ipsa non fugit quam et commodi saepe suscipit dolorem perferendis nulla. Enim provident ullam veniam quo asperiores quibusdam velit tempora.
-                Deserunt blanditiis fuga molestiae qui nihil consequuntur neque laborum obcaecati id quibusdam animi eos error adipisci eligendi nobis libero illo expedita facere excepturi, dicta nisi. Quas vel eius dolore iusto.
-                Incidunt illum praesentium vero ipsum assumenda voluptatum animi corrupti quos corporis neque, enim officia architecto laudantium aut, quasi ex facere fugit odio, iste obcaecati harum eum rerum qui! Voluptatem, nobis?
-                Assumenda, debitis error. Ratione quis velit placeat consequuntur excepturi id in provident quaerat. Error, quia, facere eius delectus voluptates ad ipsa, repellendus labore dolorem nisi distinctio est quisquam perspiciatis incidunt.
-                Obcaecati explicabo adipisci culpa dignissimos hic harum aut vero quam fugiat nulla ratione accusamus neque itaque voluptatum optio delectus labore incidunt nemo alias, sint doloribus reprehenderit. Corporis mollitia quod ut.
-                Veritatis reiciendis ullam totam sed? Obcaecati non tempore doloribus incidunt magni sequi qui mollitia cupiditate eligendi perspiciatis harum vero quaerat, enim facere ea a officiis tenetur alias cum dolorum minus!
+            <!----- USER-INTERACTIONS ----->
 
+            <div class="col user-utilities">
+                
+                <div class="user-interactions">
+                    <i class="fa-regular fa-face-smile"></i>
+                </div>
+
+                <div class="user-text">
+                    <input class="text-input" type="text" placeholder="Scrivi un messaggio">
+                </div>
+
+                <div class="user-interactions">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+                
             </div>
 
-            <div class="col your-message">
+            <!----- /USER-INTERACTIONS ----->
 
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, a!
-
-            </div>
-    
         </section>
+        
+        <!-------- /CHAT-SECTION -------->
 
+        </div>
+    
     </div>
-
     
     <script src="./js/app.js"></script>
 </body>
