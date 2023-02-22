@@ -71,6 +71,12 @@ a {
 
 /***** PROFILE *****/
 
+.col.your-profile {
+    background-color: var(--profile-bg);
+    padding: 0.5rem;
+    flex-shrink: 0;
+}
+
 .row.profile {
     align-items: center;
     gap: 0.75rem;
@@ -95,11 +101,6 @@ a {
     cursor: pointer;
 }
 
-.col.your-profile {
-    background-color: var(--profile-bg);
-    padding: 0.5rem;
-}
-
 /***** /PROFILE *****/
 
 /***** NOTIFICATIONS *****/
@@ -107,6 +108,7 @@ a {
 .col.notifications {
     background-color: var(--notification-bg);
     padding: 1rem;
+    flex-shrink: 0;
 }
 
 .row.search-row {
@@ -148,6 +150,7 @@ a {
 .col.chat-search {
     background-color: var(--search-bg);
     padding: 0.25rem;
+    flex-shrink: 0;
 }
 
 .search-button {
@@ -169,9 +172,10 @@ a {
 /***** /SEARCH-BAR *****/
 
 /***** CONTACTS *****/
+
 .col.chat-list {
     overflow-y: scroll;
-    height: 756px;
+    flex-grow: 1;
 }
 
 .row.chats {
@@ -208,10 +212,41 @@ a {
 
 /***** /CONTACTS *****/
 
-
-
-
 /******** /SIDEBAR ********/
+
+/******** CHAT SECTION ********/
+
+/***** CHAT INFO *****/
+
+.col.contact-chat-info {
+    flex-shrink: 0;
+    padding: 0.5rem;
+    background-color: var(--profile-bg);
+}
+
+/***** /CHAT INFO *****/
+
+/***** CHAT *****/
+
+.col.contact-chat {
+    flex-grow: 1;
+    display: flex;
+    overflow-y: scroll;
+    background-image: url(../img/chat-background.jpg);
+}
+
+/***** /CHAT *****/
+
+/***** YOUR MESSAGE *****/
+
+.col.your-message{
+    flex-shrink: 0;
+}
+
+/***** /YOUR MESSAGE *****/
+
+/******** /CHAT SECTION ********/
+
 
 
 
@@ -247,4 +282,14 @@ body .chat-section {
 
 body .sidebar {
     border: 2px dotted green;
+}
+
+body .col.contact-chat-info {
+    border: 1px solid black;
+    /* height: 90px; */
+}
+
+body .col.your-message {
+    border: 1px solid red;
+    /* height: 90px; */
 }
