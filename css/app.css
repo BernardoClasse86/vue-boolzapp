@@ -59,22 +59,21 @@ a {
 /********** MAIN CONTENT **********/
 
 .container {
+    width: 1420px;
+    margin: 0 auto;
     display: flex;
     height: 100vh;
-    padding: 8rem;
+    padding: 4rem;
 }
 
 .sidebar {
     flex-shrink: 0;
-    width: 500px;
 }
 
 .chat-section {
     flex-grow: 1;
     border-left: 1px solid var(--contact-last-msg);
 }
-
-
 
 /******** SIDEBAR ********/
 
@@ -110,7 +109,7 @@ a {
     width: 4rem;
     aspect-ratio: 1;
     border-radius: 999px;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 
@@ -254,6 +253,14 @@ a {
     padding-right: 1rem;
 }
 
+.off-contact {
+    display: none;
+}
+
+.on-contact {
+    display: block;
+}
+
 /***** /CHAT INFO *****/
 
 /***** CHAT *****/
@@ -274,10 +281,10 @@ a {
 }
 
 .container-chat > * {
-    border-radius: 20px;
+    border-radius: 10px;
     flex-basis: auto;
-    width: 400px;
-    padding: 1rem;
+    width: 270px;
+    padding: 0.5rem;
     margin-bottom: 1rem;
 }
 

@@ -8,8 +8,8 @@ createApp({
 
         contacts: [
             {
-                name: 'Michele',
-                avatar: './img/avatar_1.png',
+                name: 'Calcifer',
+                avatar: './img/avatar_1.webp',
                 visible: true,
                 messages: [
                     {
@@ -30,8 +30,8 @@ createApp({
                 ],
             },
             {
-                name: 'Fabio',
-                avatar: './img/avatar_2.png',
+                name: 'Howl',
+                avatar: './img/avatar_2.webp',
                 visible: true,
                 messages: [
                     {
@@ -52,8 +52,8 @@ createApp({
                 ],
             },
             {
-                name: 'Samuele',
-                avatar: './img/avatar_3.png',
+                name: 'Sophie',
+                avatar: './img/avatar_3.webp',
                 visible: true,
                 messages: [
                     {
@@ -74,8 +74,8 @@ createApp({
                 ],
             },
             {
-                name: 'Alessandro B.',
-                avatar: './img/avatar_4.png',
+                name: 'Markl',
+                avatar: './img/avatar_4.webp',
                 visible: true,
                 messages: [
                     {
@@ -91,8 +91,8 @@ createApp({
                 ],
             },
             {
-                name: 'Alessandro L.',
-                avatar: './img/avatar_5.png',
+                name: 'Rapa',
+                avatar: './img/avatar_5.webp',
                 visible: true,
                 messages: [
                     {
@@ -108,8 +108,8 @@ createApp({
                 ],
             },
             {
-                name: 'Claudia',
-                avatar: './img/avatar_5.png',
+                name: 'Suliman',
+                avatar: './img/avatar_6.webp',
                 visible: true,
                 messages: [
                     {
@@ -130,8 +130,8 @@ createApp({
                 ],
             },
             {
-                name: 'Federico',
-                avatar: './img/avatar_7.png',
+                name: 'Strega delle Lande Desolate',
+                avatar: './img/avatar_7.webp',
                 visible: true,
                 messages: [
                     {
@@ -147,8 +147,8 @@ createApp({
             ],
             },
             {
-                name: 'Davide',
-                avatar: './img/avatar_8.png',
+                name: 'Heen',
+                avatar: './img/avatar_8.webp',
                 visible: true,
                 messages: [
                     {
@@ -168,7 +168,16 @@ createApp({
                     }
                 ],
             }
-            ]
+            ],
+
+            activeContactIndex: 0
+        }
+    },
+
+    methods: {
+        changeActiveContact(index) {
+            this.activeContactIndex = index
+            // console.log('ciao')
         }
     }
 }).mount('#app')

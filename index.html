@@ -90,124 +90,25 @@
                     
                 <ul class="row-column contact-list">
                     
-                    <li class="row chats">
+                    <li class="row chats" v-for="(contact, i) in contacts" @click="changeActiveContact(i)">
                         
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
+                        <img class="profile-thumbs" :src="contact.avatar" alt="">
                         
                         <div class="contact">
                             
-                            <h4 class="contact-name">Fabio</h4>
+                            <h4 class="contact-name">{{contact.name}}</h4>
                             
-                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
+                            <p class="contact-msg">{{contact.messages[contact.messages.length - 1].message}}</p>
                             
                         </div>
                         
                         <div class="msg-time">12:00</div>
                         
                     </li>
-                    
-                    <li class="row chats">
-                        
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-                        
-                        <div class="contact">
-                            
-                            <h4>Fabio</h4>
-                            
-                            <p>Questo &eacute; il tuo messaggio</p>
-                            
-                        </div>
-                        
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-                    
-                    <li class="row chats">
-                        
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-                        
-                        <div class="contact">
-                            
-                            <h4 class="contact-name">Fabio</h4>
-                            
-                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
-                            
-                        </div>
-                        
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-                    
-                    <li class="row chats">
-                        
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-                        
-                        <div class="contact">
-                            
-                            <h4 class="contact-name">Fabio</h4>
-                            
-                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
-                            
-                        </div>
-                        
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-                    
-                    <li class="row chats">
-                        
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-                        
-                        <div class="contact">
-                            
-                            <h4 class="contact-name">Fabio</h4>
-                            
-                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
-                            
-                        </div>
-                        
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-                    
-                    <li class="row chats">
-                        
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-                        
-                        <div class="contact">
-                            
-                            <h4 class="contact-name">Fabio</h4>
-                            
-                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
-                            
-                        </div>
-                        
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-                    
-                    <li class="row chats">
-                        
-                        <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-                        
-                        <div class="contact">
-                            
-                            <h4 class="contact-name">Fabio</h4>
-                            
-                            <p class="contact-msg">Questo &eacute; il tuo messaggio</p>
-                            
-                        </div>
-                        
-                        <div class="msg-time">12:00</div>
-                        
-                    </li>
-                    
-                    
-                    
                     
                 </ul>
                 
-            </div>
+                </div>
             
             <!----- /CONTACTS ----->
             
@@ -223,19 +124,26 @@
             
             <div class="col contact-chat-info">
                 
-                <div class="row chat-profile">
-                    
-                    <img class="profile-thumbs" src="./img/my-pic.jpg" alt="">
-                    
-                    <p class="profile-name">Bernardo</p>
-                    
-                    <ul class="row profile-interactions">
+                <div class="off-contact"
+                    v-for="(contact, i) in contacts"
+                    :class="i === activeContactIndex ? 'on-contact' : ''">
+
+                    <div class="row chat-profile">
+
+                        <img class="profile-thumbs" :src="contact.avatar" alt="">
                         
-                        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                        <li><a href="#"><i class="fa-solid fa-paperclip"></i></a></li>
-                        <li><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
+                        <p class="profile-name">{{contact.name}}</p>
                         
-                    </ul>
+                        <ul class="row profile-interactions">
+                            
+                            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-paperclip"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
+                            
+                        </ul>
+
+                    </div>
+                    
                     
                 </div>
                 
