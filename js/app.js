@@ -114,7 +114,7 @@ createApp({
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Ciao Claudia, hai novità?',
+                        message: 'Ciao Suliman, hai novità?',
                         status: 'sent'
                     },
                     {
@@ -124,7 +124,7 @@ createApp({
                     },
                     {
                         date: '10/01/2020 15:51:00',
-                        message: 'Nessuna nuova, buona nuova',
+                        message: "Nessuna notizia su Howl?",
                         status: 'sent'
                     }
                 ],
@@ -170,14 +170,15 @@ createApp({
             }
             ],
 
-            activeContactIndex: 0
+            activeContactIndex: 0,
+
         }
     },
 
     methods: {
         changeActiveContact(index) {
             this.activeContactIndex = index
-            // console.log('ciao')
-        }
+            console.log('chat:', index)
+        },
     }
 }).mount('#app')

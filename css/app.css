@@ -9,6 +9,7 @@
     --contact-last-msg: #c1c1c1;
     --hover-color: #E5DDD4;
     --user-bar-color:#CDC6BC;
+    --date-style: #CDC6BC98;
     --user-interactions-icons: #6B7376;
 }
 
@@ -59,15 +60,16 @@ a {
 /********** MAIN CONTENT **********/
 
 .container {
-    width: 1420px;
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     height: 100vh;
-    padding: 4rem;
+    padding: 1rem 5rem;
 }
 
 .sidebar {
     flex-shrink: 0;
+    width: 400px;
 }
 
 .chat-section {
@@ -267,7 +269,6 @@ a {
 
 .col.contact-chat {
     flex-grow: 1;
-    display: flex;
     overflow-y: scroll;
     background-image: url(../img/chat-background.jpg);
     display: flex;
@@ -288,12 +289,31 @@ a {
     margin-bottom: 1rem;
 }
 
+.off-chat {
+    display: none;
+}
+
+.on-chat {
+    display: block;
+}
+
+.msg-date {
+    background-color: var(--date-style);
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.25rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    color: white;
+    width: 100px;
+}
+
 .sent-msg {
     background-color: var(--sent-chat-bg);
     margin-left: auto;
 }
 
-.recevied-msg {
+.received-msg {
     background-color: rgb(255, 255, 255);
     margin-right: auto;
 }

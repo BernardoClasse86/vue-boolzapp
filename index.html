@@ -28,7 +28,7 @@
                         
                         <img class="profile-thumbs" src="./img/your-pic.jpg" alt="">
                         
-                        <p class="profile-name">You</p>
+                        <p class="profile-name">Tu</p>
                         
                         <ul class="row profile-interactions">
                             
@@ -102,7 +102,7 @@
                             
                         </div>
                         
-                        <div class="msg-time">12:00</div>
+                        <div class="msg-time">{{contact.messages[contact.messages.length - 1].date.split(' ')[1].split(':').slice(0, 2).join(':')}}</div>
                         
                     </li>
                     
@@ -155,28 +155,25 @@
             
             <div class="col contact-chat">
 
-                <div class="container-chat">
+                <div class="off-chat" v-for="(contact, i) in contacts" 
+                :class="i === activeContactIndex ? 'on-chat' : ''">
 
-                    <div class="sent-msg">
-                        <p>Ciao sono io</p>
-                        <p class="msg-time">15:00</p>
-                    </div>
+                    <p class="msg-date">{{contact.messages[0].date.split(' ')[0]}}</p>
 
-                    <div class="sent-msg">
-                        <p>sto preparando da mangiare</p>
-                        <p class="msg-time">15:00</p>
-                    </div>
+                    <div v-for="msgs in contact.messages" class="container-chat">
 
-                    <div class="recevied-msg">
-                        <p>okey tra poco arrivo</p>
-                        <p class="msg-time">15:00</p>
+                        <div :class="{'sent-msg': msgs.status === 'sent', 'received-msg': msgs.status === 'received'}">
+
+                            <p>{{msgs.message}}</p>
+
+                            <p class="msg-time">{{msgs.date.split(' ')[1].split(':').slice(0, 2).join(':')}}</p>
+
+                        </div>
+
                     </div>
-                    
 
                 </div>
-
-                <div class="recevied-chat"></div>
-                
+                    
             </div>
 
             <!----- /CHAT ----->
