@@ -173,15 +173,30 @@ createApp({
             activeContactIndex: 0,
 
             inputMsg: '',
+
+            searchName: '',
+
         }
     },
-
+    
     methods: {
 
         changeActiveContact(index) {
 
             this.activeContactIndex = index
 
+        },
+
+        contactList () {
+            
+            if(this.searchName.trim().length > 0) {
+                
+                return this.contacts.filter((contact) => 
+                
+                contact.name.toLowerCase().includes(this.searchName.trim().toLowerCase()))
+            }
+            
+            return this.contacts
         },
 
         addNewMsg() {
@@ -206,15 +221,16 @@ createApp({
 
                     activeContact.messages.push({
 
-                      date: new Date().toLocaleString(),
+                        date: new Date().toLocaleString(),
 
-                      message: 'Okay',
+                        message: 'Okay',
 
-                      status: 'received'
+                        status: 'received'
 
                     })
                 }, 2000)
             }
         },
-    }
+    },
+    
 }).mount('#app')
