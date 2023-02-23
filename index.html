@@ -88,25 +88,25 @@
                 
                 <div class="col chat-list">
                     
-                <ul class="row-column contact-list">
-                    
-                    <li class="row chats" v-for="(contact, i) in contacts" @click="changeActiveContact(i)">
+                    <ul class="row-column contact-list">
                         
-                        <img class="profile-thumbs" :src="contact.avatar" alt="">
-                        
-                        <div class="contact">
+                        <li class="row chats" v-for="(contact, i) in contacts" @click="changeActiveContact(i)">
                             
-                            <h4 class="contact-name">{{contact.name}}</h4>
+                            <img class="profile-thumbs" :src="contact.avatar" alt="">
                             
-                            <p class="contact-msg">{{contact.messages[contact.messages.length - 1].message}}</p>
+                            <div class="contact">
+                                
+                                <h4 class="contact-name">{{contact.name}}</h4>
+                                
+                                <p class="contact-msg">{{contact.messages[contact.messages.length - 1].message}}</p>
+                                
+                            </div>
                             
-                        </div>
+                            <div class="msg-time">{{contact.messages[contact.messages.length - 1].date.split(' ')[1].split(':').slice(0, 2).join(':')}}</div>
+                            
+                        </li>
                         
-                        <div class="msg-time">{{contact.messages[contact.messages.length - 1].date.split(' ')[1].split(':').slice(0, 2).join(':')}}</div>
-                        
-                    </li>
-                    
-                </ul>
+                    </ul>
                 
                 </div>
             
@@ -162,9 +162,12 @@
 
                     <div v-for="msgs in contact.messages" class="container-chat">
 
-                        <div :class="{'sent-msg': msgs.status === 'sent', 'received-msg': msgs.status === 'received'}">
+                        <div class="msg-label" :class="{'sent-msg': msgs.status === 'sent', 'received-msg': msgs.status === 'received'}">
 
-                            <p>{{msgs.message}}</p>
+                            <p class="msg-text">{{msgs.message}}</p>
+                            <span class="msg-option"><i class="fa-solid fa-chevron-down"></i></span>
+                            <span class="msg-sent"><i class="fa-solid fa-check"></i></span>
+                            <span class="msg-received"><i class="fa-solid fa-check"></i></span>
 
                             <p class="msg-time">{{msgs.date.split(' ')[1].split(':').slice(0, 2).join(':')}}</p>
 
@@ -187,7 +190,7 @@
                 </div>
 
                 <div class="user-text">
-                    <input class="text-input" type="text" placeholder="Scrivi un messaggio">
+                    <input class="text-input" type="text" placeholder="Scrivi un messaggio" v-model="inputMsg" @keyup.enter="addNewMsg">
                 </div>
 
                 <div class="user-interactions">

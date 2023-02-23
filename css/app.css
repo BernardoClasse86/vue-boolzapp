@@ -60,7 +60,7 @@ a {
 /********** MAIN CONTENT **********/
 
 .container {
-    width: 1200px;
+    width: 1320px;
     margin: 0 auto;
     display: flex;
     height: 100vh;
@@ -69,7 +69,7 @@ a {
 
 .sidebar {
     flex-shrink: 0;
-    width: 400px;
+    width: 350px;
 }
 
 .chat-section {
@@ -220,12 +220,13 @@ a {
 }
 
 .contact h4 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
 }
 
 .contact p {
     color: var(--contant-last-msg);
+    font-size: 0.75rem;
 }
 
 .msg-time {
@@ -318,8 +319,56 @@ a {
     margin-right: auto;
 }
 
+.msg-label {
+    position: relative;
+}
+
+.msg-text {
+    margin-bottom: 0.5rem;
+} 
+
+.msg-option {
+    position: absolute;
+    top: 0.20rem;
+    right: 0.5rem;
+    color: grey;
+    display: none;
+    cursor: pointer;
+}
+
+.msg-label:hover .msg-option{
+    display: block;
+}
+
 .msg-time {
     text-align: end;
+}
+
+.sent-msg .msg-time {
+    margin-right: 1.5rem;
+    margin-bottom: -0.25rem;
+}
+
+.sent-msg .msg-sent {
+    position: absolute;
+    color: grey;
+    bottom: 0;
+    right: 0.5rem;
+}
+
+.sent-msg .msg-received {
+    position: absolute;
+    color: grey;
+    bottom: 0;
+    right: 0.3rem;
+}
+
+.received-msg .msg-sent {
+    display: none;
+}
+
+.received-msg .msg-received {
+    display: none;
 }
 
 /***** /CHAT *****/

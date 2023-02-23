@@ -172,13 +172,49 @@ createApp({
 
             activeContactIndex: 0,
 
+            inputMsg: '',
         }
     },
 
     methods: {
+
         changeActiveContact(index) {
+
             this.activeContactIndex = index
-            console.log('chat:', index)
+
+        },
+
+        addNewMsg() {
+
+            if (this.inputMsg !== '') {
+
+                const activeContact = this.contacts[this.activeContactIndex]
+
+                activeContact.messages.push({
+
+                    date: new Date().toLocaleString(),
+
+                    message: this.inputMsg,
+
+                    status: 'sent'
+
+                })
+
+                this.inputMsg = ''
+
+                setTimeout(() => {
+
+                    activeContact.messages.push({
+
+                      date: new Date().toLocaleString(),
+
+                      message: 'Okay',
+
+                      status: 'received'
+
+                    })
+                }, 2000)
+            }
         },
     }
 }).mount('#app')
